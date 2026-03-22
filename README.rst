@@ -9,6 +9,28 @@ if not lingo_device.pulse_ok():
     sofia_core.vault.inject("LOG: DFR_UNIT_01_EXECUTING_FALLBACK", tag="SYSTEM_SAFETY")
     
     # Aigis Pre-emptive Lockdown
+/Lingo_Brain
+│   Lingo_ai.py               <-- Main Sofia Engine
+│   .gitignore                <-- Keeps secrets & logs private
+│
+├───.github/workflows
+│       deploy_sofia.yml      <-- Automated Aigis Deployment
+│
+└───.memory
+        emergency_protocols.txt <-- Offline Failover Instructions
+        partners.json           <-- LLC Context & Memory
+{
+  "entity": "Four Love's LLC",
+  "flagship": "Hemet",
+  "authorized_partners": [],
+  "status": "Aigis Phase 1 Active"
+}
+{
+  "entity": "Four Love's LLC",
+  "flagship": "Hemet",
+  "authorized_partners": [],
+  "status": "Aigis Phase 1 Active"
+}
     for car in aigis_fleet:
         car.maintain_defensive_perimeter()
         car.notify_driver("AERIAL FEED LOST: RETURNING TO SECURE MESH")
