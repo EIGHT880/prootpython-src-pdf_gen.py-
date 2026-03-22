@@ -1,3 +1,19 @@
+{
+  "entity": "Four Love's LLC",
+  "flagship": "Hemet",
+  "authorized_partners": [],
+  "status": "Aigis Phase 1 Active"
+}
+/Lingo_Brain
+│   Lingo_ai.py               <-- Main Sofia Engine
+│   .gitignore                <-- Keeps secrets & logs private
+│
+├───.github/workflows
+│       deploy_sofia.yml      <-- Automated Aigis Deployment
+│
+└───.memory
+        emergency_protocols.txt <-- Offline Failover Instructions
+        partners.json           <-- LLC Context & Memory
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
