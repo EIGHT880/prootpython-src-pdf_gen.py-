@@ -7,7 +7,31 @@ The format is based on `Keep a Changelog`_, and this project adheres to
 `Semantic Versioning`_.
 
 Unreleased
-----------
+----------def test_revenue_summary_run():
+    # Mock data for the test run
+    revenue_data = """
+    Nov 2025: $9,950.00
+    Dec 2025: $12,900.00
+    Jan 2026: $10,750.00
+    Feb 2026: $11,350.00
+    """
+    
+    prompt = f"Analyze these 4 months of revenue stubs for a private loan application. Provide a monthly average and a professional summary for the lender:\n{revenue_data}"
+    
+    try:
+        response = model.generate_content(prompt)
+        print("LINGO BRAIN REVENUE ANALYSIS:")
+        print(response.text)
+    except Exception as e:
+        print(f"Analysis Failed: {e}")
+
+# Run the test
+if __name__ == "__main__":
+    print("Initializing Aigis Connection...")
+    heartbeat_check()
+    print("\nStarting Revenue Stub Test Run...")
+    test_revenue_summary_run()
+
 
 Please see `Unreleased Changes`_ for more information.
 
